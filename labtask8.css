@@ -1,0 +1,52 @@
+/* Basic Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    background-color: #2b6cb0;
+    color: white;
+    padding: 20px 0;
+}
+
+main {
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Fixed Contact Widget Styling */
+.contact-widget {
+    position: fixed;          /* Always fixed on screen */
+    bottom: 20px;             /* Distance from bottom */
+    right: 20px;              /* Distance from right */
+    background-color: #ffffff;
+    border: 2px solid #2b6cb0;
+    border-radius: 10px;
+    padding: 15px 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;             /* Always above other elements */
+    width: 200px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+/* Heading style inside widget */
+.contact-widget h3 {
+    margin: 0 0 10px 0;
+    color: #2b6cb0;
+}
+
+/* Email link style */
+.contact-widget a {
+    color: #2b6cb0;
+    text-decoration: none;
+}
+
+/* Hover effect on widget */
+.contact-widget:hover {
+    background-color: #e0ecff; /* Light blue on hover */
+}
