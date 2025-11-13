@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="author" content="Anik Anik">
+<meta name="description" content="DailyFlash - Breaking news and trending stories from around the world.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DailyFlash | Interactive News</title>
+<style>
+/* ===== General Styling ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f6f8;
+    color: #333;
+    scroll-behavior: smooth; /* Smooth scroll for anchor links */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #003366;
+    color: white;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+header img { margin-right: 15px; border-radius: 50%; }
+
+nav {
+    background-color: #004080;
+    position: sticky;
+    top: 80px;
+    z-index: 999;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+nav ul li { margin: 0 15px; }
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+nav ul li a.active,
+nav ul li a:hover { background-color: #ffcc00; color: #003366; transition: 0.3s; }
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.news-section {
+    width: 70%;
+}
+
+.news-section article {
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news-section article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.news-section img { width: 100%; border-radius: 8px; }
+
+aside {
+    width: 25%;
+    background-color: #ffffff;
+    border-left: 2px solid #ddd;
+    padding: 15px;
+    position: sticky;
+    top: 120px; /* sidebar sticks below header & nav */
+    height: fit-content;
+}
+
+aside h3 { color: #003366; }
+
+.ad-box {
+    background-color: #e8f0ff;
+    border:1px solid #ccc;
+    text-align:center;
+    padding:10px;
+    margin-top:15px;
+}
+
+footer {
+    background-color:#003366;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+.social-links a {
+    color:#ffcc00;
+    text-decoration:none;
+    margin:0 5px;
+}
+
+.back-top {
+    display:block;
+    margin-top:10px;
+    color:#ffcc00;
+    text-decoration:underline;
+}
+
+/* ===== Tab Styling ===== */
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* ===== Section Titles ===== */
+section { margin-bottom: 40px; }
+
+/* ===== Responsive ===== */
+@media(max-width:900px){
+    main{flex-direction:column;}
+    .news-section,.aside{width:100%;}
+}
+</style>
+</head>
+<body>
+
+<header id="top">
+    <img src="https://via.placeholder.com/60" alt="Logo">
+    <div>
+        <h1>DailyFlash</h1>
+        <p>Your Source for Instant News</p>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#home" class="tab-link active">Home</a></li>
+        <li><a href="#world" class="tab-link">World</a></li>
+        <li><a href="#sports" class="tab-link">Sports</a></li>
+        <li><a href="#tech" class="tab-link">Tech</a></li>
+        <li><a href="#lifestyle" class="tab-link">Lifestyle</a></li>
+        <li><a href="#contact" class="tab-link">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<!-- ===== Home Section ===== -->
+<section id="home" class="news-section tab-content active">
+    <h2>Home - Latest News</h2>
+    <article>
+        <h3>World Leaders Meet for Climate Summit</h3>
+        <time>November 13, 2025</time>
+        <img src="https://via.placeholder.com/400x200" alt="Climate Summit">
+        <p>Global leaders gathered to discuss urgent actions needed to combat climate change and promote sustainability.</p>
+        <a href="#">Read More</a>
+    </article>
+    <hr>
+    <article>
+        <h3>National Team Wins Championship</h3>
+        <time>November 12, 2025</time>
+        <img src="https://via.placeholder.com/400x200" alt="Team Wins">
+        <p>The national football team triumphed in the international championship, bringing home the trophy after an intense final match.</p>
+        <a href="#">Read More</a>
+    </article>
+    <hr>
+    <article>
+        <h3>New Smartphone Sets Record Sales</h3>
+        <time>November 10, 2025</time>
+        <img src="https://via.placeholder.com/400x200" alt="Smartphone Launch">
+        <p>Tech giant released its latest smartphone, which sold over 5 million units within 48 hours, setting a new industry record.</p>
+        <a href="#">Read More</a>
+    </article>
+</section>
+
+<!-- ===== World Section ===== -->
+<section id="world" class="news-section tab-content">
+    <h2>World News</h2>
+    <article>
+        <h3>Global Economy Shows Signs of Recovery</h3>
+        <time>November 9, 2025</time>
+        <img src="https://via.placeholder.com/400x200" alt="Economy">
+        <p>After months of recession fears, the global economy is stabilizing with several countries reporting steady growth.</p>
+    </article>
+    <hr>
+    <article>
+        <h3>UN Adopts New Climate Policy Framework</h3>
+        <time>November 8, 2025</time>
+        <img src="https://via.placeholder.com/400x200" alt="UN Meeting">
+        <p>The United Nations unveiled a new policy framework aimed at reducing global carbon emissions and promoting renewable energy initiatives.</p>
+    </article>
+</section>
+
+<!-- ===== Sports Section ===== -->
+<section id="sports" class="news-section tab-content">
+    <h2>Sports Headlines</h2>
+    <article>
+        <h3>Star Player Signs New Record-Breaking Deal</h3>
+        <time>November 11, 2025</time>
+        <img src="https://via.placeholder.com/400x200" alt="Player">
+        <p>One of the top football players has signed the most expensive contract in history, setting a new record in sports finance.</p>
+    </article>
+    <hr>
+    <article>
+        <h3>Olympic Preparations Underway</h3>
+        <time>November 10, 2025</time>
+        <img src="https://via.placeholder.com/400x200" alt="Olympic Stadium">
+        <p>Organizers are making final arrangements for the upcoming Olympic Games, focusing on infrastructure and athlete accommodations.</p>
+    </article>
+</section>
+
+<!-- ===== Sidebar ===== -->
+<aside>
+    <h3>Top Headlines</h3>
+    <ul>
+        <li><a href="#">Market hits all-time high</a></li>
+        <li><a href="#">New education policy announced</a></li>
+        <li><a href="#">Scientists discover new exoplanet</a></li>
+        <li><a href="#">Movie breaks global box office records</a></li>
+        <li><a href="#">AI transforming industries</a></li>
+    </ul>
+    <div class="trending">
+        <h4>Editor's Pick</h4>
+        <p><a href="#">"The Rise of Green Technology"</a></p>
+        <p><a href="#">"Inside SpaceX’s Next Mission"</a></p>
+    </div>
+    <div class="ad-box">
+        <p>Sponsored Ad</p>
+        <p>Your Ad Here</p>
+    </div>
+</aside>
+
+</main>
+
+<footer>
+    <p>© 2025 DailyFlash | All Rights Reserved.</p>
+    <div class="social-links">
+        <a href="#">Facebook</a> |
+        <a href="#">X</a> |
+        <a href="#">Instagram</a> |
+        <a href="#">LinkedIn</a>
+    </div>
+    <a href="#top" class="back-top">Back to Top</a>
+</footer>
+
+<script>
+// ===== Tab Switching =====
+const tabs = document.querySelectorAll('.tab-link');
+const sections = document.querySelectorAll('.tab-content');
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', e => {
+        e.preventDefault();
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const target = document.querySelector(tab.getAttribute('href'));
+        sections.forEach(s => s.classList.remove('active'));
+        if(target) target.classList.add('active');
+    });
+});
+</script>
+
+</body>
+</html>
