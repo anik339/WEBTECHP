@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Anik Anik">
+    <meta name="description" content="Personal Portfolio of a Computer Science Student">
+    <meta name="keywords" content="portfolio, computer science, student, internship, resume">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anik's Portfolio</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Anik Anik</h1>
+        <nav>
+            <ul>
+                <li><a href="#bio">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+        
+        <section id="bio">
+            <h2>About Me</h2>
+            <p>
+                Hello! I’m Anik, a Computer Science student passionate about software development,
+                web technologies, and problem-solving. I’m preparing for an internship where I can
+                apply my technical knowledge and teamwork skills.
+            </p>
+        </section>
+
+        <section id="education">
+            <h2>Educational Qualifications</h2>
+            <table border="1" cellpadding="8">
+                <tr>
+                    <th>Degree</th>
+                    <th>Institution</th>
+                    <th>Year</th>
+                    <th>Result</th>
+                </tr>
+                <tr>
+                    <td>B.Sc in Computer Science</td>
+                    <td>XYZ University</td>
+                    <td>2022 - Present</td>
+                    <td>Ongoing</td>
+                </tr>
+                <tr>
+                    <td>HSC</td>
+                    <td>ABC College</td>
+                    <td>2020</td>
+                    <td>GPA 5.00</td>
+                </tr>
+                <tr>
+                    <td>SSC</td>
+                    <td>DEF High School</td>
+                    <td>2018</td>
+                    <td>GPA 5.00</td>
+                </tr>
+            </table>
+        </section>
+
+       
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="#" method="post">
+                <label for="name">Full Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="30" required></textarea><br><br>
+
+                <input type="submit" value="Send Message">
+            </form>
+        </section>
+
+    </main>
+
+    
+    <footer>
+        <p>&copy; 2025 Anik Anik. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
